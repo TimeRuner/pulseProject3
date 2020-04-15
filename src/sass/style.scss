@@ -1,5 +1,6 @@
-@import "base/variables";
+@import 'base/variables';
 @import 'base/mixins';
+
 *{
     font-family: "MuseoSansCyrl", sans-serif;
 }
@@ -7,3 +8,6 @@
     max-width: 950px;
     margin: 0 auto;
 }
+@import 'blocks/promo';
+@import 'blocks/header';
+@import 'blocks/button';
