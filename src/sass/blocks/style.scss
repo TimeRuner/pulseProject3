@@ -1,7 +1,9 @@
+@import "base/variables";
+@import 'base/mixins';
 *{
     font-family: "MuseoSansCyrl", sans-serif;
 }
-h1{
-    color: green;
-    font-size: 12px;
+.container{
+    max-width: 950px;
+    margin: 0 auto;
 }
