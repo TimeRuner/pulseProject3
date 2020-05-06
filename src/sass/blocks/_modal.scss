@@ -40,6 +40,15 @@
     &_mini{
         min-height: 140px;
     }
+    input.error{
+        border: 1px solid red;
+        margin-bottom: 2px;
+    }
+    label.error{
+        border: none;
+        text-align: center;
+        margin-bottom: 15px;
+    }
 }
 
 #consultation, #order, #thanks{

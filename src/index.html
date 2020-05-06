@@ -11,7 +11,7 @@
     <title>Pulse</title>
 </head>
 <body>
-    <section class="promo">
+    <section class="promo" id="up">
         <div class="container">
             <header class="header">
                 <a class="header__logo">
@@ -118,12 +118,12 @@
             </h2>
             <div class="consultation__description">
                 Просто заполните форму заявки <br>
-                и мы перезвоним вам в течении 10 минут
+                и мы перезвоним вам в течении
             </div>
-            <form class="feed-form" action="#">
-                <input name="name" placeholder="Ваше им'я" type="text" required>
-                <input name="phone" placeholder="Ваш телефон" type="number" required>
-                <input name="email" placeholder="Ваше E-mail" type="email" required>
+            <form id="consultation-forms" class="feed-form" action="#">
+                <input name="name" placeholder="Ваше им'я" type="text">
+                <input name="phone" placeholder="Ваш телефон">
+                <input name="email" placeholder="Ваше E-mail" type="email">
                 <button class="button button_submit">заказать кОНСУЛЬТАЦИЮ</button>
             </form>
         </div>
@@ -540,9 +540,9 @@
             <div class="modal__subtitle">Просто заполните форму заявки</div>
             <div class="modal__descr">и мы перезвоним вам в течении 10 минут</div>
             <form class="feed-form feed-form_mt25" action="#">
-                <input name="name" placeholder="Ваше им'я" type="text" required>
-                <input name="phone" placeholder="Ваш телефон" type="number" required>
-                <input name="email" placeholder="Ваше E-mail" type="email" required>
+                <input name="name" placeholder="Ваше им'я" type="text">
+                <input name="phone" placeholder="Ваш телефон">
+                <input name="email" placeholder="Ваше E-mail" type="email">
 
                 <button class="button button_submit">заказать кОНСУЛЬТАЦИЮ</button>
             </form>
@@ -553,9 +553,9 @@
             <div class="modal__subtitle">Ваш заказ:</div>
             <div class="modal__descr">Пульсометр Polar FT1</div>
             <form class="feed-form feed-form_mt25" action="#">
-                <input name="name" placeholder="Ваше им'я" type="text" required>
-                <input name="phone" placeholder="Ваш телефон" type="number" required>
-                <input name="email" placeholder="Ваше E-mail" type="email" required>
+                <input name="name" placeholder="Ваше им'я" type="text">
+                <input name="phone" placeholder="Ваш телефон">
+                <input name="email" placeholder="Ваше E-mail" type="email">
 
                 <button class="button button_submit">Купить</button>
             </form>
@@ -568,8 +568,15 @@
                 в ближайшее время!</div>
         </div>
     </div>
+
+    <a href="#up" class="pageup">
+        <img src="icons/up.svg" alt="up" >
+    </a>
+
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/script.js"></script>
 </body>

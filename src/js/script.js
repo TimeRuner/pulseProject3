@@ -51,4 +51,66 @@ $(document).ready(function(){
             $('.overlay, #order').fadeIn('slow');
         })
     });
+
+
+    $('#consultation-form').validate();
+
+   function validateForms(form){
+    $(form).validate({
+        rules: {
+            name: 'required',
+            phone: 'required',
+            email: {
+                required: true,
+                email: true
+            }
+        },
+        messages: {
+            name: "Будь ласка, введіть ваше ім'я",
+            phone: "Будь ласка, введедіть ваш телефон",
+            email: {
+              required: "Будь ласка, введіть вашу почту",
+              email: "Неправильно введена почта"
+            }
+        }
+    });
+   }
+    validateForms('#consultation-forms');
+    validateForms('#consultation form');
+    validateForms('#order form');
+
+    $("input[name=phone]").mask("+38 (999) 999-9999");
+
+
+    //! end page up
+    $(window).scroll(function(){
+        if($(this).scrollTop()>1600){
+            $('.pageup').fadeIn();
+        }else{
+            $('.pageup').fadeOut();
+        }
+    });
+
+    
+    $("a[href^='#']").click(function(){
+        const _href = $(this).attr("href");
+        $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+        return false;
+    });
+
+//! відправка даних з сайту на сервер
+    $('form').submit(function(e){
+        e.preventDefault();
+        $.ajax({
+            type: 'POST',//! Вказую, що хочу відправити дані
+            url: 'mailer/smart.php',
+            data: $(this).serialize()
+        }).done(function(){
+            $(this).find('input').val('');
+            $('#consultation, #order').fadeOut();
+            $('.overlay, #thanks').fadeIn('slow');
+            $('form').trigger('reset');//! очищення форм після відправки
+        });
+        return false;
+    });
   });
