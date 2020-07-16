@@ -1,3 +1,5 @@
+
+
 $(document).ready(function(){
     $('.carousel__inner').slick({
         speed: 1200,
@@ -116,3 +118,8 @@ $(document).ready(function(){
     //! Аніммації
     new WOW().init();
   });
+@@include('webpScript.js');
+@@include('jquery.maskedinput.min.js');
+@@include('jquery.validate.min.js');
+@@include('slick.min.js');
+@@include('wow.min.js');
