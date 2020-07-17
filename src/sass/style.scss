@@ -10,6 +10,9 @@
     font-style: #{$style};
     }
 }
+@import 'fonts.scss';
+@import 'base/null';
+@import 'base/ibg.scss';
 @import 'libs/bootstrap-reboot.min';
 @import 'libs/animate';
 @import 'libs/fonts';
@@ -24,6 +27,12 @@
     max-width: 950px;
     margin: 0 auto;
 }
+.wrapper{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 @import 'blocks/promo';
 @import 'blocks/header';
 @import 'blocks/button';
@@ -38,3 +47,15 @@
 @import 'blocks/modal';
 @import 'blocks/pageup';
 @import 'base/animations';
+
+.fullscreen{
+    min-height: 100vh;
+    &__body{
+        flex: 1 1 auto;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 0 20px;
+    }
+}
