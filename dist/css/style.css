@@ -170,13 +170,7 @@ h6 {
 }
 
 .ibg img {
-  width: 0;
-  height: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  visibility: hidden;
+  display: none;
 }
 
 /*!
@@ -4224,6 +4218,7 @@ template {
 .container {
   max-width: 950px;
   margin: 0 auto;
+  position: relative;
 }
 
 .wrapper {
@@ -4235,11 +4230,6 @@ template {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-.promo {
-  padding: 21px 0 93px 0;
-  background: url("../img/promoBg.jpg") center center/cover no-repeat;
 }
 
 .promo__wrapper {
@@ -5076,7 +5066,33 @@ template {
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
+}
+
+.fullscreen__wrapper {
+  position: absolute;
+  width: 100%;
+  top: 21px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
   padding: 0 20px;
+}
+
+.main-screen {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 100%;
+          flex: 1 0 100%;
+  padding: 23.65% 0;
+}
+
+.main-screen__bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 
 @media (print), (prefers-reduced-motion: reduce) {
@@ -5090,7 +5106,5 @@ template {
     animation-iteration-count: 1 !important;
   }
 }
-
-.webp .promo { background: url(../img/promoBg.webp) center center/cover no-repeat; }
 
 .webp .consultation { background: url(../img/consultationBg.webp) center center/cover no-repeat; }
