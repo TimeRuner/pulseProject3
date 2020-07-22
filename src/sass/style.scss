@@ -11,7 +11,7 @@
     }
 }
 @import 'fonts.scss';
-@import 'base/null';
+
 @import 'base/ibg.scss';
 @import 'libs/bootstrap-reboot.min';
 @import 'libs/animate';
@@ -48,6 +48,7 @@
 @import 'blocks/modal';
 @import 'blocks/pageup';
 @import 'base/animations';
+@import 'base/null';
 
 .fullscreen{
     min-height: 100vh;
@@ -67,6 +68,12 @@
         left: 50%;
         transform: translateX(-50%);
         padding: 20px;
+        @media(max-width: 767px){
+            padding: 10px
+        }
+        @media(max-width: 320px){
+            padding: 5px
+        }
     }
 }
 
@@ -82,5 +89,10 @@
         top: 0;
         left: 0;
     }
-    
+    @media(max-width: 767px){
+        padding: 30% 0;
+    }
+    @media(max-width: 320px){
+        padding: 40% 0;
+    }
 }
