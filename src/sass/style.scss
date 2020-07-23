@@ -81,7 +81,7 @@
 .main-screen{
     position: relative;
     flex: 1 0 100%;
-    padding: 23.65% 0;
+    padding: 23.64% 0;
     &__bg{
         position: absolute;
         width: 100%;
@@ -91,6 +91,13 @@
     }
     @media(max-width: 767px){
         padding: 30% 0;
+    }
+    @media(max-width: 560px){
+        padding: 40% 0;
+    }
+    
+    @media(max-width: 400px){
+        padding: 47% 0;
     }
     @media(max-width: 320px){
         padding: 40% 0;
