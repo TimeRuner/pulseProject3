@@ -14,7 +14,7 @@ let path = {
         icons: project_folder + '/icons/',
     },
     src: {
-        html: source_folder + '/*.html',
+        html:[source_folder + '/*.html', '!' + source_folder + '/_*.html'],
         css: source_folder + '/sass/style.scss',
         js: source_folder + '/js/script.js',
         img: source_folder + '/img/**/*.{png,jpg,svg,gif,ico,webp}',
@@ -69,6 +69,7 @@ function browserSync(params) {
 
 function html() {
     return src(path.src.html)
+        .pipe(fileinclude())
         .pipe(webphtml()) 
         .pipe(htmlmin({ collapseWhitespace: true }))
         .pipe(dest(path.build.html))
