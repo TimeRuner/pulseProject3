@@ -28,12 +28,12 @@
         @include adaptiv-font(16, 12);
         @media(max-width: 767px){
             margin-top: 5%;
-            width: 300px;
+            width: 280px;
             height: 40px;
         }
         @media(max-width: 320px){
             margin-top: 15px;
-            width: 200px;
+            width: 250px;
             height: 30px;
         }
         
