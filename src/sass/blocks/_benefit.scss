@@ -2,9 +2,13 @@
     min-height: 470px;
     background-color: #f6f6f6;
     padding: 70px 0 78px 0;
+    @media(max-width: 830px){
+        padding: 50px 0 58px 0;
+    }
     &__items{
         display: flex;
         justify-content: space-between; 
+        margin: 0 25px; 
     }
     &__item{
         text-align: center;
@@ -13,21 +17,20 @@
             margin: 0 auto;
             margin-bottom: 38px;
             display: block;
-            
         }
     }
     &__title{
         margin-bottom: 25px;
         color: #0d0d0d;
-        font-size: 18px;
+        @include adaptiv_font(18, 12);
         font-weight: 700;
     }
     &__content{
         color: #0d0d0d;
-        font-size: 14px;
+        @include adaptiv_font(14, 10);
         font-weight: 300;
         a{
-            font-size: 14px;
+            @include adaptiv_font(14, 10);
             font-weight: 300;
             color: #ff0000;
             text-decoration: underline;

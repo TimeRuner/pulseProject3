@@ -80,6 +80,9 @@
 @import 'base/animations';
 @import 'base/null';
 
+h2.title{
+    @include adaptiv-font(30, 15);
+}
 // .fullscreen{
 //     min-height: 100vh;
 //     //! контейнер для фул скріна
