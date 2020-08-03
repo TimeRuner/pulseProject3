@@ -1,13 +1,13 @@
 .promo{
-    
-    @media(max-width: 1000px){
-        margin: 70px 15px 30px 15px;
+    margin: 90px 15px 110px 15px;
+    @media(max-width: 1080px){
+        margin: 70px 15px 80px 15px;
     }
     @media(max-width: 767px){
-        margin: 50px 15px 10px 15px;
+        margin: 50px 15px 50px 15px;
     }
     @media(max-width: 480px){
-        margin: 30px 15px 10px 15px;
+        margin: 20px 15px 30px 15px;
     }
     &__wrapper{
         display: flex;
@@ -23,6 +23,10 @@
         font-weight: 700;
         text-transform: uppercase;
         line-height: 42px;
+        @media(min-width: 2030px){
+            font-size: 63px;
+            line-height: 56px;
+        }
     }
     &__subheader{
         margin-top: 17px;
@@ -35,6 +39,9 @@
         }
         @media(max-width: 480px){
             margin-top: 5px;
+        }
+        @media(min-width: 2030px){
+            font-size: 35px;
         }
     }
     &__icons{
@@ -79,6 +86,9 @@
         @include adaptiv-font(16, 10);
         font-weight: 500;
         margin-top: 18px;
+        @media(min-width: 2030px){
+            font-size: 20px;
+        }
         a{
         text-decoration: underline;
         text-transform: uppercase;

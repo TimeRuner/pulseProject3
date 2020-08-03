@@ -43,6 +43,9 @@
             color: #ffffff;
             text-decoration: none;
         }
+        @media(min-width: 2030px){
+            font-size: 24px;
+        }
     }
     &__contacts{
         display: flex;

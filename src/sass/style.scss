@@ -30,9 +30,6 @@
 .wrapper{
     overflow: hidden;
     min-height: 100%;
-    // min-height: 100vh;
-    // display: flex;
-    // flex-direction: column;
 }
 .page{
     position: absolute;
@@ -48,7 +45,16 @@
 .main-screen{
     flex: 1 0 100%;
     position: relative;
-    
+    @media(max-width: 1080px){
+        flex: 1 0 auto;
+    }
+    @media(min-width: 2000px){
+        flex: 1 0 auto;
+    }
+    @media(min-height: 800px){
+        flex: 1 0 auto;
+    }
+   
     &__bg{
         position: absolute;
         width: 100%;
@@ -56,6 +62,7 @@
         top: 0;
         left: 0;
     }
+    
 }
 @import 'blocks/promo';
 @import 'blocks/header';
