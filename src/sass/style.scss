@@ -82,6 +82,12 @@
 
 h2.title{
     @include adaptiv-font(30, 15);
+    @media(max-width: 767px){
+        margin-bottom: 30px;
+    }
+    @media(max-width: 676px){
+        margin-bottom: 0;
+    }
 }
 // .fullscreen{
 //     min-height: 100vh;
