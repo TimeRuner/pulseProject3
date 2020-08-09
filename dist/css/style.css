@@ -4529,6 +4529,37 @@ template {
   left: auto;
 }
 
+.carousel .slick-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 0;
+}
+
+.carousel .slick-dots li {
+  list-style: none;
+  margin: 10px;
+}
+
+.carousel .slick-dots button {
+  font-size: 0;
+  width: 10px;
+  height: 10px;
+  background-color: grey;
+  border-radius: 50%;
+}
+
+.carousel .slick-dots li.slick-active button {
+  background-color: red;
+  border: 1 solid grey;
+}
+
 .catalog {
   padding-bottom: 100px;
 }

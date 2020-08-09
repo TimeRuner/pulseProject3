@@ -36,5 +36,27 @@
             right: -40px;
         }
     }
-    
+
+
+    .slick-dots{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0;
+    }
+    .slick-dots li{
+        list-style: none;
+        margin: 10px;
+    }
+    .slick-dots button{
+        font-size: 0;
+        width: 10px;
+        height: 10px;
+        background-color: grey;
+        border-radius: 50%;
+    }
+    .slick-dots li.slick-active button{
+        background-color: red;
+        border: 1 solid grey;
+    }
 }
