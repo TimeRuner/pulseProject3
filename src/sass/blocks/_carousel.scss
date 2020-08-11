@@ -2,14 +2,12 @@
     padding: 81px 0;
     &__inner{
         position: relative;
+        flex: 0 1 750px;
+        margin: 0 auto;
+        padding: 0 30px;
         img{
             width: 100%;
         }
-    }
-    &__wrapper{
-        flex: 0 0 750px;
-        margin: 0 auto;
-        padding: 0 30px;
     }
     .slick-prev, .slick-next{
         position: absolute;
