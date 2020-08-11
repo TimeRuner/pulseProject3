@@ -4340,7 +4340,7 @@ template {
 .button_mini {
   width: 131px;
   height: 40px;
-  font-size: 14px;
+  font-size: calc(12px + 2 * ((100vw - 320px) / 960));
 }
 
 .benefit {
@@ -4641,7 +4641,6 @@ template {
   border: 2px solid #e8e8e8;
   padding: 20px 20px 26px 20px;
   overflow: hidden;
-  margin-bottom: 20px;
   margin: 0 5px 20px 5px;
 }
 
@@ -4655,7 +4654,7 @@ template {
 .catalog-item__subtitle {
   margin-top: 20px;
   color: #0d0d0d;
-  font-size: 16px;
+  font-size: calc(13px + 3 * ((100vw - 320px) / 960));
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
@@ -4664,7 +4663,7 @@ template {
 .catalog-item__descr {
   margin-top: 16px;
   color: #0d0d0d;
-  font-size: 14px;
+  font-size: calc(12px + 2 * ((100vw - 320px) / 960));
   font-weight: 300;
   text-align: center;
 }
@@ -4673,7 +4672,7 @@ template {
   display: block;
   margin-top: 17px;
   color: #c70101;
-  font-size: 14px;
+  font-size: calc(12px + 2 * ((100vw - 320px) / 960));
   font-weight: 500;
   text-decoration: underline;
   text-align: center;
@@ -4705,14 +4704,14 @@ template {
 
 .catalog-item__old-price {
   color: #555555;
-  font-size: 14px;
+  font-size: calc(12px + 2 * ((100vw - 320px) / 960));
   font-weight: 300;
   text-decoration: line-through;
 }
 
 .catalog-item__price {
   color: #050500;
-  font-size: 20px;
+  font-size: calc(16px + 4 * ((100vw - 320px) / 960));
   font-weight: 700;
 }
 
@@ -4767,7 +4766,7 @@ template {
 .catalog-item__list li {
   position: relative;
   color: #555555;
-  font-size: 14px;
+  font-size: calc(12px + 2 * ((100vw - 320px) / 960));
   font-weight: 300;
   margin-bottom: 20px;
 }
@@ -4791,7 +4790,7 @@ template {
           transform: translateX(calc(-50% - 19px));
   display: block;
   color: #c70101;
-  font-size: 14px;
+  font-size: calc(12px + 2 * ((100vw - 320px) / 960));
   font-weight: 500;
   text-decoration: underline;
   text-transform: uppercase;
@@ -5275,6 +5274,11 @@ h2.title {
     height: 40px;
   }
 
+  .button_mini {
+    width: 130px;
+    height: 40px;
+  }
+
   .benefit {
     padding: 50px 0 58px 0;
   }
@@ -5324,6 +5328,11 @@ h2.title {
 }
 
 @media (max-width: 676px) {
+  .button_mini {
+    width: 100px;
+    height: 35px;
+  }
+
   .benefit__items {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -5344,6 +5353,18 @@ h2.title {
 
   .benefit__title {
     margin-bottom: 15px;
+  }
+
+  .catalog-item {
+    min-height: 380px;
+    padding: 15px 15px 21px 15px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 270px;
+            flex: 0 1 270px;
+  }
+
+  .catalog-item__img {
+    height: 170px;
   }
 
   h2.title {

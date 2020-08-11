@@ -63,6 +63,14 @@
     &_mini{
         width: 131px;
         height: 40px;
-        font-size: 14px;
+        @include adaptiv-font(14, 12);
+        @media(max-width: 767px){
+            width: 130px;
+            height: 40px;
+        }
+        @media(max-width: 676px){
+            width: 100px;
+            height: 35px;
+        }
     }
 }
