@@ -4801,15 +4801,17 @@ template {
 }
 
 .reviews__title {
-  font-size: 30px;
+  font-size: calc(16px + 14 * ((100vw - 320px) / 960));
   font-weight: 700;
   text-align: center;
   color: #0d0d0d;
   text-transform: uppercase;
-  margin-bottom: 70px;
 }
 
 .reviews__container {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4822,7 +4824,7 @@ template {
   margin-right: 0;
   min-height: 169px;
   border-bottom: 1px solid #f6f6f6;
-  padding: 50px 0;
+  padding: 50px 20px;
 }
 
 .reviews__container:nth-child(2) {
@@ -4835,13 +4837,16 @@ template {
 
 .reviews__img {
   display: block;
-  min-width: 169px;
-  min-height: 169px;
+  max-width: 169px;
+  max-height: 169px;
   margin-right: 62px;
 }
 
+.reviews__img img {
+  width: 100%;
+}
+
 .reviews__content {
-  min-width: 650px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4858,28 +4863,28 @@ template {
 }
 
 .reviews__header {
-  font-size: 18px;
+  font-size: calc(15px + 3 * ((100vw - 320px) / 960));
   font-weight: 700;
   color: #0d0d0d;
   margin-bottom: 10px;
 }
 
 .reviews__subheader {
-  font-size: 14px;
+  font-size: calc(12px + 2 * ((100vw - 320px) / 960));
   font-weight: 300;
   color: #646464;
   margin-bottom: 19px;
 }
 
-.reviews__desrc {
-  width: 100%;
-  font-size: 16px;
+.reviews__descr {
+  max-width: 100%;
+  font-size: calc(14px + 2 * ((100vw - 320px) / 960));
   font-weight: 300;
   color: #0d0d0d;
 }
 
 .footer {
-  height: 630px;
+  min-height: 630px;
   position: relative;
 }
 
@@ -4890,8 +4895,8 @@ template {
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
-  width: 460px;
-  height: 270px;
+  max-width: 460px;
+  min-height: 270px;
   background-color: #c70101;
   padding: 50px 68px 60px 68px;
 }
@@ -4899,7 +4904,7 @@ template {
 .footer__addr {
   margin-bottom: 36px;
   color: #ffffff;
-  font-size: 20px;
+  font-size: calc(17px + 3 * ((100vw - 320px) / 960));
   font-weight: 500;
   text-align: center;
   line-height: 20px;
@@ -4908,7 +4913,7 @@ template {
 .footer__phone {
   display: block;
   color: #ffffff;
-  font-size: 20px;
+  font-size: calc(17px + 3 * ((100vw - 320px) / 960));
   font-weight: 700;
   text-align: center;
   margin-bottom: 38px;
@@ -4968,7 +4973,7 @@ template {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 380px;
+  max-width: 380px;
   min-height: 400px;
   background-color: #f2f2f2;
   padding: 38px 40px 40px 40px;
@@ -5152,7 +5157,7 @@ h6 {
 }
 
 h2.title {
-  font-size: calc(15px + 15 * ((100vw - 320px) / 960));
+  font-size: calc(16px + 14 * ((100vw - 320px) / 960));
 }
 
 @media (min-width: 2000px) {
@@ -5322,6 +5327,11 @@ h2.title {
     margin-top: 50px;
   }
 
+  .reviews__img {
+    max-width: 150px;
+    max-height: 150px;
+  }
+
   h2.title {
     margin-bottom: 30px;
   }
@@ -5376,6 +5386,18 @@ h2.title {
   }
 }
 
+@media (max-width: 646px) {
+  .reviews__title {
+    margin: 0 0 45px 0;
+  }
+
+  .reviews__img {
+    margin-right: 42px;
+    max-width: 140px;
+    max-height: 140px;
+  }
+}
+
 @media (max-width: 576px) {
   .promo__subheader {
     margin-top: 10px;
@@ -5397,6 +5419,25 @@ h2.title {
 
   .header__official {
     display: none;
+  }
+}
+
+@media (max-width: 564px) {
+  .reviews__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .reviews__img {
+    margin-right: 0;
+    max-width: 120px;
+    max-height: 120px;
+    margin-bottom: 30px;
   }
 }
 
@@ -5483,6 +5524,39 @@ h2.title {
   }
 }
 
+@media (max-width: 468px) {
+  .modal {
+    min-height: 360px;
+    max-width: 320px;
+    padding: 28px 30px 30px 30px;
+  }
+
+  .modal__close {
+    right: 5px;
+    top: 7px;
+  }
+}
+
+@media (max-width: 425px) {
+  .reviews__container {
+    padding: 30px 15px;
+  }
+
+  .reviews__img {
+    max-width: 100px;
+    max-height: 100px;
+  }
+
+  .footer {
+    min-height: 600px;
+  }
+
+  .footer__info {
+    padding: 30px 28px 20px 28px;
+    min-height: 250px;
+  }
+}
+
 @media (max-width: 370px) {
   .promo__icons {
     width: 280px;
@@ -5520,6 +5594,11 @@ h2.title {
   .button_submit {
     width: 250px;
     height: 40px;
+  }
+
+  .button_mini {
+    width: 100px;
+    height: 35px;
   }
 
   .catalog__content {

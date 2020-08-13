@@ -81,7 +81,7 @@
 @import 'base/null';
 
 h2.title{
-    @include adaptiv-font(30, 15);
+    @include adaptiv-font(30, 16);
     @media(max-width: 767px){
         margin-bottom: 30px;
     }

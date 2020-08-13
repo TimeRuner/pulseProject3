@@ -12,6 +12,7 @@ let path = {
         img: project_folder + '/img/',
         fonts: project_folder + '/fonts/',
         icons: project_folder + '/icons/',
+        php: project_folder + '/mailer',
     },
     src: {
         html:[source_folder + '/*.html', '!' + source_folder + '/_*.html'],
@@ -20,6 +21,7 @@ let path = {
         img: source_folder + '/img/**/*.{png,jpg,svg,gif,ico,webp}',
         fonts: source_folder + '/fonts/*.{woff,woff2,eot,ttf}',
         icons: source_folder + '/icons/**/*.{png,jpg,svg,gif,ico,webp}',
+        php: source_folder + '/mailer/*',
     },
    
     watch: {
@@ -73,6 +75,12 @@ function html() {
         .pipe(webphtml()) 
         .pipe(htmlmin({ collapseWhitespace: true }))
         .pipe(dest(path.build.html))
+        .pipe(browsersync.reload({stream: true}));
+}
+
+function php(){
+    return src(path.src.php)
+        .pipe(dest(path.build.php))
         .pipe(browsersync.reload({stream: true}));
 }
 
@@ -203,11 +211,11 @@ function clean(params) {
     return del(path.clean);
 }
 
-let build = gulp.series(clean, gulp.parallel(html, css, images, icons, fonts), js, fontsStyle); 
+let build = gulp.series(clean, gulp.parallel(html, css, images, icons, fonts, php), js, fontsStyle); 
 let watch = gulp.parallel(build, watchFile, browserSync); 
 
 
-
+exports.php = php;
 exports.fontsStyle = fontsStyle;
 exports.fonts = fonts;
 exports.images = images;

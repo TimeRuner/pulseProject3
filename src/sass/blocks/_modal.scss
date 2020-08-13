@@ -12,10 +12,15 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 380px;
+    max-width: 380px;
     min-height: 400px;
     background-color: #f2f2f2;
     padding: 38px 40px 40px 40px;
+    @media(max-width: 468px){
+        min-height: 360px;
+        max-width: 320px;
+        padding: 28px 30px 30px 30px;
+    }
     &__close{
         position: absolute;
         top: 0;
@@ -24,6 +29,10 @@
         color: $main-color;
         line-height: 21px;
         cursor: pointer;
+        @media(max-width: 468px){
+            right: 5px;
+            top: 7px;
+        }
     }
     &__subtitle{
         color: #0d0d0d;
