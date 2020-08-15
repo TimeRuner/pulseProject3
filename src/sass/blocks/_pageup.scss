@@ -8,4 +8,9 @@
     img{
         width: 100%;
     }
+    @media(max-width: 1130px){
+        width: 30px;
+        height: 30px;
+        right: 20px;
+    }
 }

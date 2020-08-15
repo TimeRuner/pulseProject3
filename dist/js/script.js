@@ -129,7 +129,7 @@ $(document).ready(function(){
 
     //! end page up
     $(window).scroll(function(){
-        if($(this).scrollTop()>1600){
+        if($(this).scrollTop()>1600&&$(this).width()>=1050){
             $('.pageup').fadeIn();
         }else{
             $('.pageup').fadeOut();
