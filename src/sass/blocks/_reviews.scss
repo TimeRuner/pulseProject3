@@ -3,6 +3,7 @@
 
     &__title{
         @include adaptiv_font(30, 16);
+        margin: 0 0 50px 0;
         font-weight: 700;
         text-align: center;
         color: #0d0d0d;

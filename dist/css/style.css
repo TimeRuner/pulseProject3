@@ -4620,9 +4620,9 @@ template {
   margin-top: 60px;
   display: none;
   padding: 0 10px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -4802,6 +4802,7 @@ template {
 
 .reviews__title {
   font-size: calc(16px + 14 * ((100vw - 320px) / 960));
+  margin: 0 0 50px 0;
   font-weight: 700;
   text-align: center;
   color: #0d0d0d;
@@ -5342,6 +5343,7 @@ h2.title {
   }
 
   .catalog-item {
+    min-height: 400px;
     -webkit-box-flex: 0;
         -ms-flex: 0 1 300px;
             flex: 0 1 300px;

@@ -54,7 +54,7 @@
         margin-top: 60px;
         display: none;
         padding: 0 10px;
-        justify-content: space-between;
+        justify-content: flex-start;
         flex-wrap: wrap;    
         &_active{
             display: flex;
@@ -80,6 +80,7 @@
             flex: 0 1 350px;
         }
         @media(max-width: 767px){
+            min-height: 400px;
             flex: 0 1 300px;
         }
         @media(max-width: 676px){
